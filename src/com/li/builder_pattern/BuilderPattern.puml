@@ -1,0 +1,30 @@
+@startuml
+
+
+interface Item {
+    String name();
+    Packing packing();
+    float price();
+}
+abstract class Burger
+abstract class ColdDrink
+
+interface Packing
+abstract class Wrapper
+abstract class Bottle
+
+Item <|-- Burger
+Item <|-- ColdDrink
+
+Packing <|-- Wrapper
+Packing <|-- Bottle
+
+Burger <|- VegBurger
+Burger <|- ChickenBurger
+
+ColdDrink <|- Pepsi
+ColdDrink <|- Coke
+
+
+
+@enduml
